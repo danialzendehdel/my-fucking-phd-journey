@@ -1,6 +1,6 @@
 baseURL = "https://danialzendehdel.github.io/my-fucking-phd-journey/"
 languageCode = "en-us"
-theme = "poison"
+theme = "custom-theme"
 #paginate = 10
 #pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
 
@@ -16,7 +16,7 @@ theme = "poison"
     # favicon = "favicon.png"             # path to favicon (defaults to favicon.png)
 
     front_page_content = ["about","posts"] # Equivalent to the default value, add page bundle names to include them on the front page.
-    customCSS = ["css/lib/custom.css"]
+
     # MENU PLACEHOLDER
     # Menu dict keys:
         # Name:         The name to display on the menu.
