@@ -1,8 +1,8 @@
 baseURL = "https://danialzendehdel.github.io/my-fucking-phd-journey/"
 languageCode = "en-us"
 theme = "custom-theme"
-#paginate = 10
-#pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
+paginate = 10
+pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
 
 # NOTE: If using Disqus as commenting engine, uncomment and configure this line
 # disqusShortname = "yourDisqusShortname"
@@ -14,8 +14,8 @@ theme = "custom-theme"
     description = "My Fucking PhD Journey" # Used as default meta description if not specified in front matter
     dark_mode = true                      # optional - defaults to false
     # favicon = "favicon.png"             # path to favicon (defaults to favicon.png)
-
-    front_page_content = ["about","posts"] # Equivalent to the default value, add page bundle names to include them on the front page.
+    customCSS = ["css/lib/custom.css"]
+    front_page_content = ["posts"] # Equivalent to the default value, add page bundle names to include them on the front page.
 
     # MENU PLACEHOLDER
     # Menu dict keys:
