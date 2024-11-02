@@ -1,7 +1,7 @@
 
 ---
 title: "Monte Carlo (MC) Methods 1"
-date: 2022-11-30T15:04:46-06:00
+date: '2024-10-27T17:21:07+01:00'
 draft: false
 ---
 
