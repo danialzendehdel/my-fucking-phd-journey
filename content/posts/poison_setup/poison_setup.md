@@ -1,6 +1,6 @@
 +++
 date = '2024-11-02T17:21:07+01:00'
-draft = true
+draft = false
 title = 'Poison_setup'
 +++
 
@@ -20,7 +20,7 @@ This guide is intended for users who are new to the Poison theme but have access
 7. [Hugo.toml File Specifications](#hugo-toml-file-specifications)
 
 ---
-
+{{< relimg "posts/poison_setup/images/poison_manual.jpg" "manual" >}}
 
 ## 1. Installing and Running Poison Locally
 1. Clone the repository with the Poison theme submodule.
