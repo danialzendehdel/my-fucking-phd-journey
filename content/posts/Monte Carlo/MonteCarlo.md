@@ -13,6 +13,15 @@ Monte Carlo (MC) methods are a foundational model-free approach in reinforcement
 In this post, we will answer common questions about MC methods, including how they work, how they differ from Temporal Difference (TD) and Dynamic Programming (DP) methods, and why they are model-free. We’ll focus on the characteristics of MC methods, including bias, variance, and bootstrapping, which often cause confusion.
 
 
+[//]: # (![Description of the image]&#40;/my-fucking-phd-journey/posts/Monte%20Carlo/images/napkin-selection.jpg&#41;)
+
+{{< relimg "posts/Monte Carlo/images/napkin-selection.jpg" "Napkin Selection" >}}
+
+
+
+
+
+
 ## Key Concepts in Monte Carlo Methods
 
 1. **Episode-Based Learning**:
@@ -46,6 +55,7 @@ where:
 This update formula is an **incremental average** of returns observed for each state. It provides a stable approximation of the expected value as episodes accumulate, allowing MC to converge to the true expected return.
 
 ## Characteristics of Monte Carlo Methods
+{{< relimg "posts/Monte Carlo/images/MC_pros_cons.jpg" "MC pros cons" >}}
 
 1. **Model-Free**:
    - Monte Carlo methods are **model-free**, meaning they do not need the environment’s transition probabilities or reward function to calculate value estimates. This is a crucial distinction from DP methods, which are model-based.
