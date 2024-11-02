@@ -1,8 +1,8 @@
-+++
+---
 date = '2024-11-02T17:21:07+01:00'
 draft = false
 title = 'Poison_setup'
-+++
+---
 
 # Poison Theme Manual for Hugo
 
