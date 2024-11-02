@@ -10,7 +10,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
 [params]
     brand = "My Fucking PhD Journey"                      # name of your site - appears in the sidebar
     # remote_brand_image = 'https://github.com/USERNAME.png' # path to a remote file
-    # brand_image = "/images/test.jpg"    # path to the image shown in the sidebar
+    brand_image = "images/brand_image.jpg"     # path to the image shown in the sidebar
     description = "The Miserable PhD student" # Used as default meta description if not specified in front matter
     dark_mode = true                      # optional - defaults to false
     # favicon = "favicon.png"             # path to favicon (defaults to favicon.png)
@@ -104,7 +104,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
                                           # For this to work though og_image and brand_url must be a path inside the assets directory
                                           # e.g. /assets/images/site/og-image.png becomes images/site/og-image.png
     # publisher_icon = ""                 # path to publisher icon - defaults to favicon, used in schema
-
+    relativeURLs = true                   # if true, URLs are relative to the content root, if false, URLs are relative to the site root
 [taxonomies]
     series = 'series'
     tags = 'tags'
