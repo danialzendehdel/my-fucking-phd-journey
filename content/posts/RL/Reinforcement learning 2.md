@@ -7,7 +7,10 @@ title = 'Reinforcement learning 2'
 
 # Exploring Q-learning, SARSA, Monte Carlo, and Double Q-learning: Practical Insights Beyond the Books
 
+
 In the journey to mastering reinforcement learning (RL), foundational algorithms like **Q-learning**, **SARSA**, **Monte Carlo Control**, and **Double Q-learning** are essential building blocks. While many textbooks introduce these algorithms and their mechanics, several practical aspects and nuanced questions often remain unexplored. This blog post dives into these methods with hands-on insights, explaining their differences, tackling common questions, and highlighting practical challenges such as maximization bias, policy consistency, and convergence speed. Let’s delve into these four algorithms, discuss why they behave differently, and compare their performance in a "slippery walk" environment. 
+
+
 {{< relimg "posts/RL/images/SARSA.png" "Napkin Selection" >}}
 ---
 
@@ -93,7 +96,10 @@ After implementing and running all four algorithms (Monte Carlo, SARSA, Q-learni
 - **Double Q-learning** showed the slowest convergence due to alternating updates between two Q-tables, but it mitigated maximization bias effectively.
 
 This comparison highlights that each algorithm has distinct strengths and limitations: Q-learning excels in speed, SARSA in policy adherence, Monte Carlo in complete return estimates, and Double Q-learning in bias reduction.
+more information on GitHub. 
 
+
+[Practical examples](https://github.com/danialzendehdel/RL_Grokking)
 ---
 
 ## Conclusion
