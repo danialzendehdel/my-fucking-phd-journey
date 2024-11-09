@@ -7,9 +7,8 @@ title = 'Reinforcement learning 2'
 
 # Exploring Q-learning, SARSA, Monte Carlo, and Double Q-learning: Practical Insights Beyond the Books
 
-In the journey to mastering reinforcement learning (RL), foundational algorithms like **Q-learning**, **SARSA**, **Monte Carlo Control**, and **Double Q-learning** are essential building blocks. While many textbooks introduce these algorithms and their mechanics, several practical aspects and nuanced questions often remain unexplored. This blog post dives into these methods with hands-on insights, explaining their differences, tackling common questions, and highlighting practical challenges such as maximization bias, policy consistency, and convergence speed. Let’s delve into these four algorithms, discuss why they behave differently, and compare their performance in a "slippery walk" environment.
-
-{{< relimg "posts/Monte Carlo/images/SARSA.png" "Napkin Selection" >}}
+In the journey to mastering reinforcement learning (RL), foundational algorithms like **Q-learning**, **SARSA**, **Monte Carlo Control**, and **Double Q-learning** are essential building blocks. While many textbooks introduce these algorithms and their mechanics, several practical aspects and nuanced questions often remain unexplored. This blog post dives into these methods with hands-on insights, explaining their differences, tackling common questions, and highlighting practical challenges such as maximization bias, policy consistency, and convergence speed. Let’s delve into these four algorithms, discuss why they behave differently, and compare their performance in a "slippery walk" environment. 
+{{< relimg "posts/RL/images/SARSA.png" "Napkin Selection" >}}
 ---
 
 ## 1. SARSA and Q-learning: On-Policy vs. Off-Policy Learning
