@@ -291,7 +291,7 @@ menu = [
         # inside of a directory with the same name.
 
         # Example:
-        # ... /content/about/about.md
+        # ... /content/about/_index.md
         {Name = "About", URL = "/about/", HasChildren = false},
         
         # ... /content/foo/_index.md

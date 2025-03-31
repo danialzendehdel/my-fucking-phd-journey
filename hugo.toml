@@ -1,4 +1,4 @@
-baseURL = "https://danialzendehdel.github.io/my-fucking-phd-journey/"
+baseURL = "danialzendehdel.engineer"
 languageCode = "en-us"
 theme = "custom-theme"
 paginate = 10
