@@ -1,5 +1,5 @@
 +++
-date = '2024-04-09T23:58:37+01:00'
+date = '2023-04-09T23:58:37+01:00'
 draft = false
 title = 'Soft Actor-Critic (SAC)'
 +++
