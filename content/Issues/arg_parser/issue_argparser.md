@@ -1,3 +1,10 @@
++++
+date = '2025-08-13T22:37:09+01:00'
+draft = false
+title = 'argparser'
++++
+
+
 # Booleans in `argparse` (and how to fix it)
 
 **TL;DR:** Don’t use `type=bool` for CLI flags. It turns strings like `"False"` into `True`. Use actions instead: `action='store_true'`, `action='store_false'`, or (Python ≥ 3.9) `BooleanOptionalAction`.
