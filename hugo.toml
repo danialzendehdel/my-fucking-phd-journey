@@ -3,7 +3,6 @@ languageCode = "en-us"
 theme = "custom-theme"
 paginate = 10
 pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
-relativeURLs = true
 
 # NOTE: If using Disqus as commenting engine, uncomment and configure this line
 # disqusShortname = "yourDisqusShortname"
