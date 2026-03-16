@@ -1,8 +1,9 @@
-baseURL = "danialzendehdel.engineer"
+baseURL = "https://danialzendehdel.github.io/my-fucking-phd-journey/"
 languageCode = "en-us"
 theme = "custom-theme"
 paginate = 10
 pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
+relativeURLs = true
 
 # NOTE: If using Disqus as commenting engine, uncomment and configure this line
 # disqusShortname = "yourDisqusShortname"
@@ -29,6 +30,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
         {Name = "Projects", URL = "projects/", Pre = "Recent", HasChildren = true, Limit = 5},
         {Name = "API", URL = "LLM API/", Pre = "Recent", HasChildren = true, Limit = 5},
         {Name = "Issues", URL = "Issues/", Pre = "Recent", HasChildren = true, Limit = 5},
+        {Name = "Perks", URL = "perks/", Pre = "Resources", HasChildren = true, Limit = 5},
     ]
 
     # Links to your socials.  Comment or delete any you don't need/use.
@@ -106,7 +108,6 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
                                           # For this to work though og_image and brand_url must be a path inside the assets directory
                                           # e.g. /assets/images/site/og-image.png becomes images/site/og-image.png
     # publisher_icon = ""                 # path to publisher icon - defaults to favicon, used in schema
-    relativeURLs = true                   # if true, URLs are relative to the content root, if false, URLs are relative to the site root
 [taxonomies]
     series = 'series'
     tags = 'tags'
