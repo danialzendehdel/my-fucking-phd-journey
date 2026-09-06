@@ -1,8 +1,10 @@
 baseURL = "https://danialzendehdel.com/"
 languageCode = "en-us"
 theme = "custom-theme"
-paginate = 10
 pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
+
+[pagination]
+    pagerSize = 10
 
 # NOTE: If using Disqus as commenting engine, uncomment and configure this line
 # disqusShortname = "yourDisqusShortname"
@@ -11,7 +13,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
     brand = "Danial Zendehdel"                      # name of your site - appears in the sidebar
     # remote_brand_image = 'https://github.com/USERNAME.png' # path to a remote file
     brand_image = "images/brand_image.jpg"     # path to the image shown in the sidebar
-    description = "PhD student" # Used as default meta description if not specified in front matter
+    description = "Research engineer, Honda Research Institute Europe · PhD candidate, Sapienza" # Used as default meta description if not specified in front matter
     dark_mode = true                      # optional - defaults to false
     # favicon = "favicon.png"             # path to favicon (defaults to favicon.png)
     customCSS = ["css/lib/custom.css"]
@@ -28,14 +30,14 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
         {Name = "CV", URL = "cv/", HasChildren = false},
         {Name = "Posts", URL = "posts/", Pre = "Recent", HasChildren = true, Limit = 5},
         {Name = "Projects", URL = "projects/", Pre = "Recent", HasChildren = true, Limit = 5},
-        {Name = "API", URL = "LLM API/", Pre = "Recent", HasChildren = true, Limit = 5},
-        {Name = "Issues", URL = "Issues/", Pre = "Recent", HasChildren = true, Limit = 5},
+        {Name = "API", URL = "llm-api/", Pre = "Recent", HasChildren = true, Limit = 5},
+        {Name = "Issues", URL = "issues/", Pre = "Recent", HasChildren = true, Limit = 5},
         {Name = "Perks", URL = "perks/", Pre = "Resources", HasChildren = true, Limit = 5},
     ]
 
     # Links to your socials.  Comment or delete any you don't need/use.
 #    discord_url = "https://discord.com"
-    email_url = "mailto://sawfly.bamboo6806@eagereverest.com"
+    email_url = "mailto:sawfly.bamboo6806@eagereverest.com"
 #    facebook_url = "https://facebook.com"
 #    flickr_url = "https://flickr.com"
     github_url = "https://github.com/danialzendehdel"
@@ -108,6 +110,10 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
                                           # For this to work though og_image and brand_url must be a path inside the assets directory
                                           # e.g. /assets/images/site/og-image.png becomes images/site/og-image.png
     # publisher_icon = ""                 # path to publisher icon - defaults to favicon, used in schema
+[markup]
+    [markup.goldmark.renderer]
+        unsafe = true   # allow raw HTML in markdown (CV entries, project pages)
+
 [taxonomies]
     series = 'series'
     tags = 'tags'

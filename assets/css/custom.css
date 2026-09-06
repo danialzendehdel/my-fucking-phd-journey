@@ -1,0 +1,225 @@
+/* ------------------------------------------------------------------
+   Site-level overrides for the Poison-derived theme.
+   This file replaces themes/custom-theme/assets/css/custom.css in the
+   CSS bundle (site assets win over theme assets).
+   ------------------------------------------------------------------ */
+
+/* ---------- CV page ---------- */
+.cv .cv-subtitle {
+    margin-top: -0.5rem;
+    color: var(--date-color);
+    font-style: italic;
+}
+.cv h2 {
+    margin-top: 2.25rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--table-border-color);
+}
+.cv .cv-entry {
+    margin-top: 1.25rem;
+}
+.cv .cv-entry + ul {
+    margin-top: 0.4rem;
+}
+.cv .cv-head,
+.cv .cv-sub {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.cv .cv-org {
+    font-weight: 700;
+}
+.cv .cv-when,
+.cv .cv-sub {
+    color: var(--date-color);
+    font-size: 0.95em;
+}
+.cv .cv-sub span:first-child {
+    font-style: italic;
+}
+.cv .cv-note {
+    color: var(--date-color);
+    font-size: 0.9em;
+}
+
+/* ---------- Projects: card grid ---------- */
+.projects-intro {
+    color: var(--list-color);
+    margin-bottom: 1.5rem;
+}
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0 0 1.5rem;
+}
+.project-filter {
+    font: inherit;
+    font-size: 0.8em;
+    padding: 0.15em 0.8em;
+    border: 1px solid var(--table-border-color);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.project-filter:hover,
+.project-filter.is-active {
+    background: var(--link-color);
+    border-color: var(--link-color);
+    color: #fff;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    gap: 1.25rem;
+}
+.project-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--table-border-color);
+    border-radius: 0.6rem;
+    background: var(--table-stripe-color);
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.project-card[hidden] {
+    display: none;
+}
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+.project-card-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.project-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.1rem 1.1rem;
+    flex: 1;
+}
+.project-card-meta,
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.9rem;
+    font-size: 0.8em;
+    color: var(--date-color);
+}
+.project-card-title {
+    font-size: 1.15rem;
+    margin: 0;
+    line-height: 1.3;
+}
+.project-card-title a {
+    color: var(--post-title-color);
+    text-decoration: none;
+}
+.project-card-title a:hover {
+    color: var(--link-color);
+}
+.project-card-summary {
+    margin: 0;
+    font-size: 0.93em;
+    color: var(--list-color);
+    flex: 1;
+}
+.project-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+.project-tags li {
+    display: inline;
+}
+.project-tags li a {
+    display: inline-block;
+    padding: 0 0.6em;
+    font-size: 0.72em;
+    border-radius: 0.25em;
+    background-color: var(--list-color);
+    color: var(--bkg-color);
+    text-decoration: none;
+}
+.project-card-links,
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    font-size: 0.88em;
+}
+.project-link-ext::after {
+    content: " ↗";
+    font-size: 0.85em;
+}
+
+/* ---------- Projects: detail page ---------- */
+.project-back {
+    font-size: 0.85em;
+    margin-bottom: 0.5rem;
+}
+.project .info .post-title {
+    margin-bottom: 0.4rem;
+}
+.project .info ul.project-tags {
+    float: none;
+    display: flex;
+    margin: 0.6rem 0 0;
+}
+.project .info ul.project-tags li {
+    margin-left: 0;
+}
+.project-status {
+    padding: 0 0.6em;
+    border-radius: 0.25em;
+    border: 1px solid var(--table-border-color);
+}
+.project-hero {
+    margin: 1.25rem 0;
+}
+.project-hero img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.project-hero figcaption {
+    font-size: 0.85em;
+    color: var(--date-color);
+    text-align: center;
+}
+.project-links {
+    margin: 1rem 0 1.5rem;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid var(--table-border-color);
+    border-radius: 0.5rem;
+    background: var(--table-stripe-color);
+}
+.project-publication {
+    margin-top: 2rem;
+    padding: 0.8rem 1rem;
+    border-left: 3px solid var(--link-color);
+    background: var(--table-stripe-color);
+    font-size: 0.93em;
+}
+.project-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--table-border-color);
+    font-size: 0.9em;
+}
+.project-nav .next {
+    margin-left: auto;
+    text-align: right;
+}
