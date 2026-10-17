@@ -1,7 +1,7 @@
 ---
 title: "Real-Time EMS for a Renewable Energy Community"
 date: 2024-06-30
-draft: false
+draft: true
 summary: "An extended battery equivalent-circuit model used as the simulation environment for a real-time energy management system, capturing behaviour that idealised battery models miss."
 period: "2023 – 2024"
 affiliation: "Sapienza Università di Roma"

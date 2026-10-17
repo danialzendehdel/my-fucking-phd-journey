@@ -1,7 +1,7 @@
 ---
 title: "Reinforcement Learning for the National Energy Transition of the Netherlands"
 date: 2025-09-01
-draft: false
+draft: true
 summary: "A reinforcement learning environment and trained agents that simulate multi-year investment and retrofitting decisions for the Dutch energy system under uncertainty."
 period: "Sep 2025 – Apr 2026"
 affiliation: "TU Delft"

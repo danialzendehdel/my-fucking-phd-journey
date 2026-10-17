@@ -1,7 +1,7 @@
 ---
 title: "Seasonal vs. Non-Seasonal Forecasting of Energy Demand in Smart Grids"
 date: 2023-11-01
-draft: false
+draft: true
 summary: "A comparison of seasonal and non-seasonal forecasting techniques for energy demand time series, as the forecasting layer of a smart-grid energy management system."
 period: "2023"
 affiliation: "Sapienza Università di Roma"

@@ -1,29 +1,41 @@
 ---
-title: "Deep Stereo Depth Estimation on Unrectified 360° Images"
-date: 2022-08-01
+title: "Stereo Depth Estimation on a Real, Unrectified 360° Dataset"
+date: 2023-03-01
 draft: false
-summary: "Deep stereo networks adapted to unrectified 360-degree camera images, plus a new lidar-and-camera dataset collected and released for the group."
-period: "Feb 2022 – Aug 2022"
-affiliation: "EPFL, VITA Lab"
-role: "Visiting Researcher"
+summary: "MSc thesis: recorded a new real-world dataset of 17,373 stereo 360° image pairs with LiDAR depth ground truth, and adapted deep stereo networks (PSMNet, 360SD-Net) to work on it without rectification."
+period: "2022 – 2023"
+affiliation: "Sapienza University of Rome · EPFL VITA Lab"
+role: "MSc thesis"
 status: "Completed"
-tags: ["Computer vision", "Depth estimation", "Datasets"]
-featuredImage: ""
-links: []
-publication: ""
-weight: 60
+tags: ["Computer vision", "Depth estimation", "Datasets", "PyTorch"]
+featuredImage: "/images/projects/360-depth-rig.jpg"
+featuredImageAlt: "Two vertically stacked 360-degree cameras and an Ouster LiDAR mounted on an autonomous delivery vehicle, with sample upper and lower panoramas and the LiDAR depth image"
+featuredImageCaption: "Recording rig: two vertically stacked RICOH Theta 360° cameras above an Ouster OS1-64 LiDAR, with an upper image, lower image and LiDAR depth frame from the same instant."
+links:
+  - name: "Code & thesis on GitHub"
+    url: "https://github.com/danialzendehdel/Thesis"
+publication: "MSc thesis, *A Deep Learning Architecture for Enhanced Depth Estimation on an Unrectified Stereo 360° Dataset*, Sapienza University of Rome. Supervisors: Prof. Antonello Rizzi (Sapienza), Prof. Alexandre Alahi (EPFL)."
+weight: 10
 ---
 
-## Overview
+## The problem
 
-Stereo depth networks assume rectified pinhole image pairs. Two 360-degree cameras on a mobile platform give neither. This project adapted existing deep stereo architectures to unrectified omnidirectional images and built the dataset needed to train and evaluate them.
+Stereo depth networks are trained almost entirely on synthetic data and on rectified pinhole image pairs. Real 360° cameras on a vehicle give neither: the images are heavily distorted equirectangular panoramas, and rectifying them needs careful calibration that does not survive outside the lab. Existing 360° depth datasets (Matterport3D, Stanford 3D) are synthetic or rendered, so there was nothing realistic to train or evaluate on.
 
-## Approach
+## What I built
 
-- Reproduced the published benchmark results of existing deep stereo networks on their original datasets before changing anything.
-- Modified the network architectures so they operate on unrectified 360-degree image pairs.
-- Built a data collection rig from a lidar and two 360-degree cameras, recorded a new dataset, debugged the lidar extraction, and released the cleaned dataset in a standard format for the group.
+**A new dataset.** I designed and recorded a real-world dataset with two RICOH Theta 360° cameras stacked vertically above an Ouster OS1-64 LiDAR, at EPFL in Lausanne.
+
+- 17,373 time-synchronised tuples (upper image, lower image, LiDAR depth image and point cloud) across two outdoor street scenes and two indoor corridors.
+- 3840 × 1920 stereo images, with LiDAR depth images at 1024 × 64 as ground truth (depth, not disparity).
+- Deliberately left **unrectified**, to make the dataset closer to what a deployed system sees. I removed the LiDAR distortion and aligned its panoramic output with the camera format so the three streams line up.
+
+**A network that works on it.** I benchmarked PSMNet and 360SD-Net, then modified 360SD-Net to train on the new data: a feature extractor with residual blocks and dilated convolutions, an ASPP module for context, a cost volume regularised by a stacked-hourglass 3D CNN, and depth regression. The polar angle of each pixel is fed in through a separate branch and fused late, to give the network the distortion pattern of the equirectangular projection. Trained for 500 epochs in PyTorch.
 
 ## Results
 
-Working depth estimation on unrectified 360-degree pairs, and a cleaned dataset released for the group. The work also formed the MSc thesis at Sapienza.
+![Qualitative depth results on an outdoor street scene](/images/projects/360-depth-results.jpg)
+
+- Out of the box, 360SD-Net did not cope with the unrectified pairs (RMSE in the thousands on the Outdoor 1 scene); the modified network reached an RMSE of 0.9 on the same scene.
+- Ablations showed larger input crops help (256 × 512 beat 256 × 256), while the polar-angle branch contributed little on this dataset, so it can be dropped to cut compute.
+- The dataset, released to the lab, gives a harder and more realistic benchmark for 360° stereo depth than the synthetic alternatives.

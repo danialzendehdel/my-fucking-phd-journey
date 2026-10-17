@@ -1,7 +1,7 @@
 ---
 title: "Fair Multi-Agent EV Charging under a Shared Power Budget"
 date: 2026-06-01
-draft: false
+draft: true
 summary: "Multi-agent deep RL policies that schedule electric-vehicle charging under a shared power budget, reaching a wider efficiency–fairness Pareto front than the group's evolutionary schedulers."
 period: "Jun 2026 – present"
 affiliation: "Honda Research Institute Europe"

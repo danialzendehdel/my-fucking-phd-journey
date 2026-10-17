@@ -1,7 +1,7 @@
 ---
 title: "Multi-Objective Battery Dispatching with an Enhanced SAC Algorithm"
 date: 2025-06-30
-draft: false
+draft: true
 summary: "Dispatch policies that balance operating cost against battery degradation, built on an extended Soft Actor-Critic and evaluated against optimisation baselines."
 period: "2024 – 2025"
 affiliation: "Sapienza Università di Roma"
