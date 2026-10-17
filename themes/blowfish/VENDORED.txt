@@ -1,0 +1,1 @@
+Vendored from github.com/nunocoracao/blowfish at ebe683e (2026-10-07).

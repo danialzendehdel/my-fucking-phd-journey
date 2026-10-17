@@ -1,0 +1,31 @@
+{{- /* Usage: {{< publications >}} all, grouped by year; {{< publications compact="true" >}} flat list for the CV */ -}}
+{{- $pubs := hugo.Data.publications -}}
+{{- $compact := eq (.Get "compact") "true" -}}
+{{- $labels := dict "journal" "Journal" "conference" "Conference" "chapter" "Book chapter" "thesis" "Thesis" "accepted" "Accepted" -}}
+{{- $me := "D. Zendehdel" -}}
+{{- define "pubitem" -}}
+  {{- $p := .p -}}
+  <li class="pub">
+    <div class="pub-title">{{ $p.title }}</div>
+    <div class="pub-authors">{{ replace $p.authors .me (printf "<strong>%s</strong>" .me) | safeHTML }}</div>
+    <div class="pub-venue"><em>{{ $p.venue }}</em>{{ with $p.pages }}, pp. {{ . }}{{ end }}{{ if .compact }}, {{ $p.year }}{{ end }}</div>
+    <div class="pub-meta">
+      <span class="pub-type">{{ index .labels $p.type }}</span>
+      {{- with $p.doi }}<a class="pub-link" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">DOI</a>{{ end -}}
+      {{- with $p.url }}<a class="pub-link" href="{{ . }}" target="_blank" rel="noopener">Code</a>{{ end -}}
+    </div>
+  </li>
+{{- end -}}
+{{- if $compact -}}
+<ol class="pubs pubs-compact">
+  {{- range $pubs }}{{ if ne .type "thesis" }}{{ template "pubitem" (dict "p" . "me" $me "labels" $labels "compact" true) }}{{ end }}{{ end -}}
+</ol>
+{{- else -}}
+  {{- range (sort (uniq (apply $pubs "index" "." "year")) "value" "desc") -}}
+    {{- $y := . -}}
+    <h2 class="pub-year" id="y{{ $y }}">{{ $y }}</h2>
+    <ol class="pubs">
+      {{- range where $pubs "year" $y }}{{ template "pubitem" (dict "p" . "me" $me "labels" $labels "compact" false) }}{{ end -}}
+    </ol>
+  {{- end -}}
+{{- end -}}

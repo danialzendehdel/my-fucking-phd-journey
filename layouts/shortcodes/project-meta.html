@@ -1,0 +1,16 @@
+{{- /* Renders the project's period/affiliation/role/status and links from front matter. Put {{< project-meta >}} at the top of a project page. */ -}}
+{{- $p := .Page.Params -}}
+<div class="project-meta not-prose">
+  <dl>
+    {{ with $p.period }}<div><dt>Period</dt><dd>{{ . }}</dd></div>{{ end }}
+    {{ with $p.affiliation }}<div><dt>Where</dt><dd>{{ . }}</dd></div>{{ end }}
+    {{ with $p.role }}<div><dt>Role</dt><dd>{{ . }}</dd></div>{{ end }}
+    {{ with $p.status }}<div><dt>Status</dt><dd>{{ . }}</dd></div>{{ end }}
+  </dl>
+  {{ with $p.links }}
+  <div class="project-links">
+    {{ range . }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }} ↗</a>{{ end }}
+  </div>
+  {{ end }}
+  {{ with $p.publication }}<p class="project-pub">{{ . | markdownify }}</p>{{ end }}
+</div>

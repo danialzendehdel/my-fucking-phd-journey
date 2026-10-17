@@ -1,0 +1,64 @@
+# Source of truth for /publications/ and the CV list.
+# Verified against Crossref (Oct 2026). Add new papers at the top.
+# type: journal | conference | chapter | thesis | accepted
+- title: "Game-Theoretic Fair Allocation in MPC-Based Management of Renewable Energy Communities"
+  authors: "D. Zendehdel"
+  venue: "Accepted for publication"
+  year: 2026
+  type: accepted
+  status: "Accepted"
+
+- title: "Intelligent Energy Management for Renewable Energy Communities and Microgrids: Models, Algorithms, and Practical Constraints"
+  authors: "D. Zendehdel, G. Ferro, E. De Santis, A. Rizzi"
+  venue: "Stochastic Planning and Modeling for Energy Systems, Elsevier"
+  pages: "491–532"
+  year: 2026
+  type: chapter
+  doi: "10.1016/b978-0-443-45298-7.00020-3"
+
+- title: "Degradation-Aware Energy Management in Residential Microgrids: A Reinforcement Learning Framework"
+  authors: "D. Zendehdel, G. Ferro, E. De Santis, A. Rizzi"
+  venue: "IJCCI 2025 · Computational Intelligence, Communications in Computer and Information Science, Springer"
+  pages: "538–557"
+  year: 2026
+  type: conference
+  doi: "10.1007/978-3-032-15638-9_31"
+
+- title: "Multi-Objective Battery Dispatching using an Enhanced SAC Algorithm"
+  authors: "D. Zendehdel, E. De Santis, A. Capillo, P. Odonkor, A. Rizzi"
+  venue: "International Joint Conference on Neural Networks (IJCNN 2025), IEEE"
+  pages: "1–8"
+  year: 2025
+  type: conference
+  doi: "10.1109/ijcnn64981.2025.11227829"
+
+- title: "Seasonality Effect Exploration for Energy Demand Forecasting in Smart Grids"
+  authors: "S. Taghdisi Rastkar, D. Zendehdel, A. Capillo, E. De Santis, A. Rizzi"
+  venue: "Computational Intelligence, Studies in Computational Intelligence, Springer"
+  pages: "211–223"
+  year: 2025
+  type: chapter
+  doi: "10.1007/978-3-031-85252-7_12"
+
+- title: "An Extended Battery Equivalent Circuit Model for an Energy Community Real Time EMS"
+  authors: "D. Zendehdel, A. Capillo, E. De Santis, A. Rizzi"
+  venue: "International Joint Conference on Neural Networks (IJCNN 2024), IEEE"
+  pages: "1–9"
+  year: 2024
+  type: conference
+  doi: "10.1109/ijcnn60899.2024.10650667"
+
+- title: "A Comparison Between Seasonal and Non-Seasonal Forecasting Techniques for Energy Demand Time Series in Smart Grids"
+  authors: "S. Rastkar, D. Zendehdel, E. De Santis, A. Rizzi"
+  venue: "15th International Joint Conference on Computational Intelligence (IJCCI 2023), SciTePress"
+  pages: "459–467"
+  year: 2023
+  type: conference
+  doi: "10.5220/0012265900003595"
+
+- title: "A Deep Learning Architecture for Enhanced Depth Estimation on an Unrectified Stereo 360° Dataset"
+  authors: "D. Zendehdel"
+  venue: "MSc thesis, Sapienza University of Rome (with EPFL VITA Lab)"
+  year: 2022
+  type: thesis
+  url: "https://github.com/danialzendehdel/Thesis"

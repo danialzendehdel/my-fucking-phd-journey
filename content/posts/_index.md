@@ -1,5 +1,6 @@
 ---
-title: "Posts"
-draft: false
-description: "A collection of posts on various topics."
+title: "Blog"
+description: "Notes on reinforcement learning and the occasional engineering walkthrough."
+groupByYear: true
+cardView: false
 ---

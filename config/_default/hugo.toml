@@ -1,0 +1,23 @@
+baseURL = "https://danialzendehdel.com/"
+defaultContentLanguage = "en"
+theme = "blowfish"
+title = "Danial Zendehdel"
+
+enableRobotsTXT = true
+summaryLength = 0
+enableEmoji = true
+
+[pagination]
+  pagerSize = 20
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  tag = "tags"
+  series = "series"
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5

@@ -1,0 +1,65 @@
+colorScheme = "slate"
+defaultAppearance = "light"
+autoSwitchAppearance = true
+enableSearch = true
+enableCodeCopy = true
+disableImageOptimization = false
+mainSections = ["projects", "posts"]
+
+[header]
+  layout = "fixed-fill-blur"
+
+[footer]
+  showMenu = true
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+[homepage]
+  layout = "profile"
+  showRecent = true
+  showRecentItems = 3
+  showMoreLink = true
+  showMoreLinkDest = "/projects/"
+  cardView = true
+  cardViewScreenWidth = false
+
+[article]
+  showDate = false
+  showDateUpdated = false
+  showAuthor = false
+  showHero = true
+  heroStyle = "big"
+  showBreadcrumbs = true
+  showDraftLabel = true
+  showHeadingAnchors = true
+  showPagination = false
+  showReadingTime = false
+  showTableOfContents = false
+  showTaxonomies = true
+  showCategories = false
+  showTags = true
+  showWordCount = false
+
+[list]
+  showHero = false
+  showBreadcrumbs = false
+  showSummary = true
+  showTableOfContents = false
+  showCards = true
+  orderByWeight = false
+  groupByYear = false
+  cardView = true
+  cardViewScreenWidth = false
+
+[taxonomy]
+  showTermCount = true
+
+[term]
+  showTableOfContents = false
+  groupByYear = false
+  cardView = true
+
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]

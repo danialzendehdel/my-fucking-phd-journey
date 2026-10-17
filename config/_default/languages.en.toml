@@ -1,0 +1,25 @@
+disabled = false
+locale = "en"
+label = "English"
+weight = 1
+title = "Danial Zendehdel"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "January 2006"
+  description = "Danial Zendehdel: research engineer at Honda Research Institute Europe and PhD candidate at Sapienza. Deep reinforcement learning for energy systems and multi-agent coordination; computer vision and robotics."
+
+  [params.author]
+    name = "Danial Zendehdel"
+    image = "img/avatar.jpg"
+    imageQuality = 90
+    headline = "Research Engineer · Deep Reinforcement Learning"
+    bio = "Research engineer at Honda Research Institute Europe and PhD candidate at Sapienza University of Rome. Deep RL for energy systems and multi-agent coordination; earlier computer vision and robotics at EPFL."
+    links = [
+      { linkedin = "https://www.linkedin.com/in/danialzendehdel/" },
+      { github = "https://github.com/danialzendehdel" },
+      { x-twitter = "https://x.com/Dany_ZN" },
+      { email = "mailto:sawfly.bamboo6806@eagereverest.com" },
+    ]
