@@ -1,7 +1,7 @@
 {{- /* Usage: {{< publications >}} all, grouped by year; {{< publications compact="true" >}} flat list for the CV */ -}}
 {{- $pubs := hugo.Data.publications -}}
 {{- $compact := eq (.Get "compact") "true" -}}
-{{- $labels := dict "journal" "Journal" "conference" "Conference" "chapter" "Book chapter" "thesis" "Thesis" "accepted" "Accepted" -}}
+{{- $labels := dict "journal" "Journal" "conference" "Conference" "chapter" "Book chapter" "thesis" "Thesis" "accepted" "Accepted" "preprint" "Manuscript" -}}
 {{- $me := "D. Zendehdel" -}}
 {{- define "pubitem" -}}
   {{- $p := .p -}}
